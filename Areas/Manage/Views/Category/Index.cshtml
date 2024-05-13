@@ -1,0 +1,30 @@
+﻿@using MVC_pronia.Models
+@model List<Category>
+<table class="table">
+    @{
+        int count = 0;
+    }
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Product</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            count++;
+            <tr>
+                <td>@count</td>
+               <td> @item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Products</td>
+
+            </tr>
+        }
+
+
+    </tbody>
+</table>
